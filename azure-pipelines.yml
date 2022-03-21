@@ -39,7 +39,7 @@ jobs:
         - task: AzureWebApp@1
           displayName: 'Deploy Azure Web App : {{ webAppName }}'
           inputs:
-            azureSubscription: a35b5f19-56a2-46c9-9761-c9a07214b63c
+            azureSubscription: $(azureServiceConnectionId)
             appName: $(webAppName)
             package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
 
